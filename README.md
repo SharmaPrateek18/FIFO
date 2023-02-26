@@ -20,15 +20,15 @@ Full : the full signal for the FIFO
 Empty : the empty signal for the FIFO
 Half_Empty : the half-empty signal for the FIFO
 
-## Parameters:
+# Parameters:
 The module top_FIFO has two parameters:
 M : the total number of words in the FIFO. It is set to 32 by default.
 N : the data width of each word in the FIFO. It is set to 16 by default.
 
-## Working:
+# Working:
 The FIFO is implemented using two pointers - Write_Pointer and Read_Pointer - which track the current write and read locations in the FIFO, respectively. The FIFO is implemented using an array Memory of size M, where each location is N bits wide. The Write_Data input is written to the current Write_Pointer location in the FIFO when WE is high and the FIFO is not full. The Read_Data output is read from the current Read_Pointer location in the FIFO when RE is high and the FIFO is not empty.
 
 The Full, Empty, and Half_Empty signals are used to indicate the current status of the FIFO. Full is high when the FIFO is full, Empty is high when the FIFO is empty, and Half_Empty is high when the FIFO is half-empty.
 
-## Simulation and Synthesis:
+# Simulation and Synthesis:
 The code has been written to be synthesizable and can be synthesized using any standard Verilog synthesis tool. The code can also be simulated using any standard Verilog simulation tool.
